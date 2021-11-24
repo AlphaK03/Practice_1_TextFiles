@@ -25,6 +25,8 @@ int main(){
     auto* vehiculo2 = new Vehiculo("MERCEDES", "2019", 20);
     auto* trabajador2 = new Trabajador(309820782, "Junior Villareal", 250000, 3.0, vehiculo);
 
+
+
     listaTrabajadores.push_back(*trabajador2);
 
     adminArchivo.escribir(listaTrabajadores);

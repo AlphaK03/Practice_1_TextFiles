@@ -13,6 +13,7 @@ void AdministradorArchivo::escribir(vector<Trabajador> listaTrabajadores) {
         exit(1);
     }
 
+
     for(auto& cont : listaTrabajadores){ //Recorre la lista de trabajadores y ejecuta el toString() de cada uno
         archivo << "-----------------------------" << endl;
         archivo << cont.toString();      //y los guarda en el archivo
@@ -26,7 +27,7 @@ string AdministradorArchivo::leer() {
     ifstream archivo;
     string texto;
 
-    archivo.open("C:/Programacion II/Practices/ArchivosTXT/Practice_1_TextFiles/cmake-build-debug/src/ListaTrabajadores.txt");
+    archivo.open("C:/Programacion II/Practices/ArchivosTXT/Practice_1_TextFiles/cmake-build-debug/src/ListaTrabajadores.txt", ios::in);
 
     if(archivo.fail()){
         exit(1);
